@@ -1,16 +1,16 @@
-import React from "react";
-import Link from "next/link";
-import properties from "@/properties.json";
-import PropertyCard from "@/components/PropertyCard";
+import React from 'react'
+import Link from 'next/link'
+import properties from '@/properties.json'
+import PropertyCard from '@/components/PropertyCard'
 
 const PropertiesPage = () => {
   return (
-    <section className="px-4 py-6">
-      <div className="px-4 py-6 m-auto container-xl lg:container">
+    <section className='px-4 py-6'>
+      <div className='px-4 py-6 m-auto container-xl lg:container'>
         {properties.length === 0 ? (
           <p>No properties found</p>
         ) : (
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
             {properties.map((property) => (
               <PropertyCard key={property._id} property={property} />
             ))}
@@ -18,7 +18,7 @@ const PropertiesPage = () => {
         )}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default PropertiesPage;
+export default PropertiesPage
